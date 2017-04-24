@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- Basic Page Needs
+   ================================================== -->
+    <meta charset="utf-8">
+    <title>GoogleSheets to HTML</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+   ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+
+    <!-- Script
+   ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- Favicons
+	================================================== -->
+    <link rel="shortcut icon" href="favicon.png">
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div id="status">
+            <img src="images/preloader.gif" height="64" width="64" alt="">
+        </div>
+    </div>
+
+    <!-- Intro Section
+   ================================================== -->
+    <section id="intro">
+
+        <header class="row">
+
+        </header>
+        <!-- Header End -->
+
+        <div id="main" class="row">
+
+            <div class="twelve columns">
+
+                <h3>Please fill in your ORDER NUMBER to find the details for your order!</h3>
+
+
+                <!-- Begin MailChimp Signup Form -->
+                <div id="mc_embed_signup">
+
+                        <input type="text" value="" name="TEXT" class="email" id="orderid" placeholder="order number" required>
+                        <button type="button" value="Search"  id="find" class="button">Search</button>
+                        <!-- </div> -->
+
+                </div>
+            </div>
+
+        </div>
+        <!-- main end -->
+
+    </section>
+    <!-- end intro section -->
+
+    <!-- Style Guide Section
+   ================================================== -->
+    <section id="styles" style="padding: 50px 0 72px; background: #fff;">
+
+        <div class="row section-head">
+
+            <h3 style="margin:0 auto;text-align: center;padding-bottom:20px;">Order details.</h3>
+
+            <div class="results">
+
+            </div>
+        </div>
+        <div id="output"></div>
+        <!-- Row End-->
+
+    </section>
+    <!-- Style Guide Section End-->
+
+    <!-- Location Section
+   ================================================== -->
+
+    <!-- footer
+   ================================================== -->
+    <footer>
+
+        <div class="row">
+            <div class="twelve columns">
+                <ul class="copyright">
+                    <li>&copy; Copyright 2014 Zoon</li>
+                    <li>Design by CataJmek</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer End-->
+
+    <!-- Java Script
+   ================================================== -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')
+    </script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="js/jquery.placeholder.js"></script>
+    <script src="js/backstretch.js"></script>
+    <script src="js/init.js"></script>
+    <script>
+        // Make sure it is public or set to Anyone with link can view
+        var url = "https://spreadsheets.google.com/feeds/list/1nKH8xdaqJM9N1dpzToEfjWf8LqS3KNtjicEBcClTc8A/od6/public/values?alt=json";
+
+        var input;
+
+  $("#find").click(function(){
+            $.getJSON(url, function(data) {
+            input = document.getElementById("orderid").value;
+                var entry = data.feed.entry;
+                console.log(entry);
+
+                $.each(entry, function(i, v) {
+
+                    if (v.gsx$id.$t == input) {
+                        $('.results').prepend('<div class="four columns"><p>' + v.gsx$id.$t + '</p></div><div class="four columns"><p>' + v.gsx$firstname.$t + '</p></div><div class="four columns"><p>' + v.gsx$lastname.$t +
+                            '</p></div>');
+                        return;
+                    }
+                });
+
+            });
+
+            });
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+/*
+=====================================================================
+*   Zoon v1.0 Layout Stylesheet
+*   url: styleshout.com
+*   06-07-2014
+=====================================================================
+
+   TOC:
+   a. General Styles
+   b. Intro Section
+   c. About Section
+   d. Location Section
+   e. Footer
+
+===================================================================== */
+
+/* ------------------------------------------------------------------ */
+/* a. General Styles
+/* ------------------------------------------------------------------ */
+
+body { background: #0f0f0f; }
+
+
+/* ------------------------------------------------------------------ */
+/* b. Intro Styles
+/* ------------------------------------------------------------------ */
+
+#intro {
+   position: relative;
+   padding-bottom: 70px;
+   min-height: auto;
+   width: 100%;
+   max-height: 370px;
+   background-size: cover !important;
+	-webkit-background-size: cover !important;
+}
+
+/* Main
+------------------------------------------------------------------ */
+#main {
+	margin: 70px auto 0;
+	text-align: center;
+}
+#main h3 {
+	font: 20px/1.2em 'montserrat-bold', sans-serif;
+	color: #fff;
+	margin-bottom: 18px;
+	padding: 0 10%;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, .5);
+}
+
+
+
+/* mailchimp form */
+#main #mc_embed_signup {
+	clear: both;
+	margin: 48px auto 18px;
+	width: 50%;
+}
+#main #mc_embed_signup:before,
+#main #mc_embed_signup:after {
+    content: " ";
+    display: table;
+}
+#main #mc_embed_signup:after {
+    clear: both;
+}
+
+#main #mc_embed_signup input {
+	float: left;
+}
+#main #mc_embed_signup input[type="text"] {
+	font-size: 15px;
+	height: 54px;
+	line-height: 30px;
+	padding: 12px 15px;
+	border-radius: 3px 0 0 3px;
+	background: #727272;
+	background: rgba(255, 255, 255, .2);
+	width: 70%;
+}
+#main #mc_embed_signup button[type="button"] {
+	font-size: 15px;
+	line-height: 30px;
+	height: 54px;
+	padding: 12px 30px;
+	margin: 0 0 18px 0;
+	border-radius: 0 3px 3px 0;
+	background: #197C28;
+	background: rgba(25, 124, 40, 1);
+	width: 30%;
+}
+#main #mc_embed_signup button[type="button"]:hover {
+	background: #146320;
+}
+
+
+.results p{
+  display: inline;
+  margin-left: 10px;
+  color: #313131
+}
+
+
+/* ------------------------------------------------------------------ */
+/* e. Footer
+/* ------------------------------------------------------------------ */
+
+footer {
+	font: 14px/24px 'montserrat-regular', sans-serif;
+	background: #0f0f0f;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   color: #303030;
+}
+footer a, footer a:visited { color: #525252; }
+footer a:hover, footer a:focus { color: #fff; }
+
+/* copyright */
+footer .copyright {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+ }
+footer .copyright li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+.ie footer .copyright li {
+   display: inline;
+}
+footer .copyright li:before {
+    content: "\2022";
+    padding-left: 6px;
+    padding-right: 10px;
+    color: #1B6728;
+}
+footer .copyright  li:first-child:before {
+    display: none;
+}

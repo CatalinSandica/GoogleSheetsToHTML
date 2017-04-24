@@ -1,0 +1,210 @@
+/* ==================================================================
+
+*   Zoon Media Queries
+*   url: styleshout.com
+*   06-07-2014
+
+/* ================================================================== */
+
+
+/* screenwidth less than 1140px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 1140px) {
+
+	/* Intro Styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 800px; }
+
+	/* Header
+	------------------------------------------------------------------ */
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main { margin-top: 90px; }
+  	#main h3 {
+  		font: 38px/1.2em 'montserrat-bold', sans-serif;
+  		padding: 0 15%;
+  	}
+	#main p { font: 16px/30px 'montserrat-regular', sans-serif; }
+
+
+	/* mailchimp form */
+	#main #mc_embed_signup { margin-bottom: 6px; }
+
+}
+
+/* screenwidth less than 900px
+--------------------------------------------------------------------- */
+@media only screen and (max-width: 900px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 400px; }
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main h3 {
+  		font: 35px/1.2em 'montserrat-bold', sans-serif;
+  		padding: 0 8%;
+  	}
+  	#main p {
+  		font: 16px/30px 'montserrat-regular', sans-serif;
+  		padding: 0 10%;
+  	}
+
+
+	/* mailchimp form */
+	#main #mc_embed_signup {
+		width: 65%;
+		margin-top: 36px;
+	}
+	#main #mc-embedded-subscribe-form {
+		margin-bottom: 0;
+	}
+	#main #mc_embed_signup input[type="text"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+		text-align: center;
+	}
+	#main #mc_embed_signup button[type="button"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+	}
+
+
+}
+
+/* mobile
+---------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main { margin-top: 48px; }
+  	#main h3 {
+  		font: 30px/1.2em 'montserrat-bold', sans-serif;
+  		text-align: center;
+  	}
+  	#main p {
+		font: 14px/24px 'montserrat-regular', sans-serif;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	/* mailchimp form */
+	#main #mc_embed_signup {
+		clear: both;
+		margin: 12px auto 0;
+		width: 75%;
+	}
+	#main #mc-embedded-subscribe-form {
+		margin-bottom: 0;
+	}
+	#main #mc_embed_signup input[type="text"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+		text-align: center;
+	}
+	#main #mc_embed_signup button[type="button"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+	}
+
+
+   /* footer
+   ------------------------------------------------------------------------ */
+  	footer {	padding-bottom: 30px; }
+
+   /* copyright */
+	footer .copyright { text-align: center; }
+   footer .copyright li:before { content: none; }
+   footer .copyright li {
+   	margin: 0;
+   	display: block;
+   	line-height: 27px;
+   }
+
+}
+
+/* screenwidth less than 460px
+  -------------------------------------------------------------------------- */
+@media only screen and (max-width: 460px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 780px; }
+
+   /* main
+   ------------------------------------------------------------------ */
+   #main h3 {
+  		font: 28px/1.2em 'montserrat-bold', sans-serif;
+		padding: 0 5px;
+  	}
+
+
+	/* mailchimp form */
+	#main #mc_embed_signup { width: 80%; }
+	#main #mc_embed_signup input[type="text"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+		text-align: center;
+	}
+	#main #mc_embed_signup button[type="button"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+	}
+
+
+
+   /* footer
+   ------------------------------------------------------------------------ */
+
+   /* social links */
+   footer .social-links { font-size: 20px; }
+   footer .social-links li { margin-left: 14px; }
+
+
+}
+
+/* screenwidth less than 400px
+  -------------------------------------------------------------------------- */
+@media only screen and (max-width: 400px) {
+
+	/* intro styles
+	------------------------------------------------------------------ */
+	#intro {	min-height: 744px; }
+
+	/* main
+   ------------------------------------------------------------- */
+   #main { margin-top: 42px; }
+   #main h3 { font: 25px/1.2em 'montserrat-bold', sans-serif; 	}
+  	#main p { font: 12px/21px 'montserrat-regular', sans-serif;	}
+
+
+
+	/* mailchimp form */
+	#main #mc_embed_signup { width: 90%; }
+
+	#main #mc_embed_signup input[type="text"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+		text-align: center;
+	}
+	#main #mc_embed_signup button[type="button"] {
+		width: 100%;
+		border-radius: 3px;
+		float: none;
+	}
+	/* header social links */
+   #main .social { font-size: 17px;}
+   #main .social li { margin: 0 6px; }
+
+}
