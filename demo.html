@@ -131,12 +131,14 @@
 
                 $.each(entry, function(i, v) {
                     if (v.gsx$id.$t == input) {
-                      $('#mydiv').html( '' ); 
+                      $('#mydiv').html( '' );
                         $('.results').prepend('<div class="four columns"><p>' + v.gsx$id.$t + '</p></div><div class="four columns"><p>' + v.gsx$firstname.$t + '</p></div><div class="four columns"><p>' + v.gsx$lastname.$t +
                             '</p></div>');
-                        $('#orderid').val("");
+                        $('#orderid').val('');
                         return;
                     }
+                  $('#orderid').val('');
+                  
                 });
 
             });
