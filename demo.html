@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html class="no-js" lang="en">
+
 <head>
 
     <!--- Basic Page Needs
@@ -26,7 +27,7 @@
 
     <!-- Favicons
 	================================================== -->
-    <link rel="shortcut icon" href="favicon.png">
+
 
 </head>
 
@@ -57,9 +58,9 @@
                 <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
 
-                        <input type="text" value="" name="TEXT" class="email" id="orderid" placeholder="order number" required>
-                        <button type="button" value="Search"  id="find" class="button">Search</button>
-                        <!-- </div> -->
+                    <input type="text" value="" name="TEXT" class="email" id="orderid" placeholder="order number" required>
+                    <button type="button" value="Search" id="find" class="button">Search</button>
+                    <!-- </div> -->
 
                 </div>
             </div>
@@ -78,11 +79,10 @@
 
             <h3 style="margin:0 auto;text-align: center;padding-bottom:20px;">Order details.</h3>
 
-            <div class="results">
+            <div class="results" id="mydiv"></div>
 
-            </div>
         </div>
-        <div id="output"></div>
+
         <!-- Row End-->
 
     </section>
@@ -124,28 +124,36 @@
 
         var input;
 
-  $("#find").click(function(){
+        $("#find").click(function() {
             $.getJSON(url, function(data) {
-            input = document.getElementById("orderid").value;
+                input = document.getElementById("orderid").value;
                 var entry = data.feed.entry;
-                console.log(entry);
 
                 $.each(entry, function(i, v) {
-
                     if (v.gsx$id.$t == input) {
+                      $('#mydiv').html( '' ); 
                         $('.results').prepend('<div class="four columns"><p>' + v.gsx$id.$t + '</p></div><div class="four columns"><p>' + v.gsx$firstname.$t + '</p></div><div class="four columns"><p>' + v.gsx$lastname.$t +
                             '</p></div>');
+                        $('#orderid').val("");
                         return;
                     }
                 });
 
             });
 
-            });
+        });
 
-
+        function myFunction() {
+            location.reload();
+        }
     </script>
-
+    <script type="text/javascript">
+        $("#orderid").keyup(function(event) {
+            if (event.keyCode == 13) {
+                $("#find").click();
+            }
+        });
+    </script>
 
 
 </body>
